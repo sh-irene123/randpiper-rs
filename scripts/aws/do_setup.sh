@@ -20,7 +20,7 @@ done < $FILE
 for ip in "${IPS[@]}"
 do
     echo $ip
-    ssh -i /Users/ireneisaac/node.pem ubuntu@$ip 'bash -ls' < scripts/aws/setup.sh &
+    ssh -i /Users/ireneisaac/node.pem ubuntu@$ip 'bash -ls' < /Users/ireneisaac/randpiper-rs/scripts/aws/setup.sh &
 done
 
 wait
