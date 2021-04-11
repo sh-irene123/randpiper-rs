@@ -5,7 +5,6 @@ sudo apt-get update
 sudo apt-get install git build-utils
 echo "Hello world"
 sudo apt-get install make
-sudo apt install build-essential
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > install-rust.sh
 
 bash install-rust.sh -y
