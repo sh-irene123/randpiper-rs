@@ -20,13 +20,13 @@ done < $FILE
 for ip in "${IPS[@]}"
 do
     echo $ip
-    ssh -t arch@$ip 'bash -ls' < scripts/aws/setup.sh &
+    ssh -i /Users/ireneisaac/node.pem ubuntu@$ip 'bash -ls' < scripts/aws/setup.sh &
 done
 
 wait
 
 for ip in "${IPS[@]}"
 do
-  ssh arch@$ip "cd randpiper-rs; cat > ips_file" < $IPS_FILE
-  ssh arch@$ip "cd randpiper-rs; cat > cli_ip_file" < $CLI_IPS_FILE
+  ssh -i /Users/ireneisaac/node.pem ubuntu@$ip "cd randpiper-rs; cat > ips_file" < $IPS_FILE
+  ssh -i /Users/ireneisaac/node.pem ubuntu@$ip "cd randpiper-rs; cat > cli_ip_file" < $CLI_IPS_FILE
 done
