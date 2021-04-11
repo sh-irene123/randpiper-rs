@@ -7,8 +7,8 @@ CLI_IPS_FILE=${3:-"scripts/aws/cli_ips.log"}
 IPS=()
 
 # Create Private IP files
-bash scripts/aws/get_pvt_ips.sh < $FILE \
-> $PVT_IP_FILE
+#bash scripts/aws/get_pvt_ips.sh < $FILE \
+#> $PVT_IP_FILE
 
 # Create IP files
 bash scripts/aws/make_ip_files.sh $PVT_IP_FILE $IPS_FILE $CLI_IPS_FILE
